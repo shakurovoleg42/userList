@@ -91,7 +91,7 @@ export default function App() {
                     e.stopPropagation();
                     deleteUser(user.id);
                   }}
-                  className="text-red-600 hover:underline"
+                  className="text-red-600 hover:underline bg-red-100 px-2 py-1 rounded cursor-pointer"
                 >
                   Delete
                 </button>
@@ -144,38 +144,6 @@ export default function App() {
           </DialogContent>
         </Dialog>
       )}
-      {/* {selectedUser && (
-        <div className="mt-6 p-4 border rounded bg-gray-50">
-          <h2 className="text-lg font-semibold mb-4">Edit User</h2>
-          <p className="mb-2">
-            <strong>Name:</strong> {selectedUser.name}
-          </p>
-          <p className="mb-2">
-            <strong>Email:</strong> {selectedUser.email}
-          </p>
-          <p className="mb-2">
-            <strong>Sex:</strong> {selectedUser.sex}
-          </p>
-          <p className="mb-2">
-            <strong>Birthday:</strong> {selectedUser.birthday}
-          </p>
-
-          <label className="block mb-1 font-semibold">Address:</label>
-          <input
-            className="border p-2 w-full mb-4"
-            value={selectedUser.address}
-            onChange={(e) =>
-              setSelectedUser({ ...selectedUser, address: e.target.value })
-            }
-          />
-          <button
-            onClick={() => updateUser(selectedUser)}
-            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-          >
-            Save
-          </button>
-        </div>
-      )} */}
     </div>
   );
 }
