@@ -69,11 +69,11 @@ export default function App() {
         <thead className="bg-gray-100">
           <tr>
             <th className="border px-3 py-2">Username</th>
-            <th className="border px-3 py-2">Sex</th>
+            {/* <th className="border px-3 py-2">Sex</th> */}
             <th className="border px-3 py-2">Address</th>
-            <th className="border px-3 py-2">Name</th>
+            {/* <th className="border px-3 py-2">Name</th> */}
             <th className="border px-3 py-2">Email</th>
-            <th className="border px-3 py-2">Birthday</th>
+            {/* <th className="border px-3 py-2">Birthday</th> */}
             <th className="border px-3 py-2">Actions</th>
           </tr>
         </thead>
@@ -88,11 +88,11 @@ export default function App() {
               }}
             >
               <td className="border px-3 py-2">{user.username}</td>
-              <td className="border px-3 py-2">{user.sex}</td>
+              {/* <td className="border px-3 py-2">{user.sex}</td> */}
               <td className="border px-3 py-2">{user.address}</td>
-              <td className="border px-3 py-2">{user.name}</td>
+              {/* <td className="border px-3 py-2">{user.name}</td> */}
               <td className="border px-3 py-2">{user.email}</td>
-              <td className="border px-3 py-2">{user.birthday}</td>
+              {/* <td className="border px-3 py-2">{user.birthday}</td> */}
               <td className="border px-3 py-2">
                 <button
                   onClick={(e) => {
