@@ -31,14 +31,14 @@ export default function App() {
       headers: { "X-Api-Key": "wUXtFhZd2o2TjxqPS74HPA==LEA0Wjdete6faGXd" },
     });
     const data = await res.json();
-
+    console.log(data);
     const user: User = {
       id: uuidv4(),
       username: data.username,
       name: data.name,
       address: data.address,
       email: data.email,
-      sex: data.gender,
+      sex: data.sex,
       birthday: data.birthday,
     };
 
@@ -53,6 +53,8 @@ export default function App() {
     store.dispatch({ type: "UPDATE_USER", payload: user });
     setSelectedUser(null);
   };
+  console.log(users);
+  console.log(selectedUser);
 
   return (
     <div className="p-6 max-w-4xl mx-auto flex flex-col">
@@ -67,8 +69,11 @@ export default function App() {
         <thead className="bg-gray-100">
           <tr>
             <th className="border px-3 py-2">Username</th>
+            <th className="border px-3 py-2">Sex</th>
             <th className="border px-3 py-2">Address</th>
+            <th className="border px-3 py-2">Name</th>
             <th className="border px-3 py-2">Email</th>
+            <th className="border px-3 py-2">Birthday</th>
             <th className="border px-3 py-2">Actions</th>
           </tr>
         </thead>
@@ -83,8 +88,11 @@ export default function App() {
               }}
             >
               <td className="border px-3 py-2">{user.username}</td>
+              <td className="border px-3 py-2">{user.sex}</td>
               <td className="border px-3 py-2">{user.address}</td>
+              <td className="border px-3 py-2">{user.name}</td>
               <td className="border px-3 py-2">{user.email}</td>
+              <td className="border px-3 py-2">{user.birthday}</td>
               <td className="border px-3 py-2">
                 <button
                   onClick={(e) => {
