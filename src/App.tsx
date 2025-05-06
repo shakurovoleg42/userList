@@ -60,7 +60,7 @@ export default function App() {
     <div className="p-6 max-w-4xl mx-auto flex flex-col">
       <button
         onClick={addUser}
-        className="bg-blue-600 text-white px-4 py-2 rounded mb-4 hover:bg-blue-700"
+        className="bg-black text-white px-4 py-2 rounded mb-4"
       >
         Add User
       </button>
@@ -112,10 +112,10 @@ export default function App() {
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>Edit address user</DialogTitle>
+              <DialogTitle>📝 Edit address user 📝</DialogTitle>
               <DialogDescription>
                 <div className="mt-6 p-4 border rounded bg-gray-50">
-                  <h2 className="text-lg font-semibold mb-4">Edit User</h2>
+                  {/* <h2 className="text-lg font-semibold mb-4">Edit User</h2> */}
                   <p className="mb-2">
                     <strong>Name:</strong> {selectedUser.name}
                   </p>
